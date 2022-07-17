@@ -7,6 +7,12 @@
 //   }
 // });
 
-import { fromEvent } from 'rxjs';
+import { fromEvent, throttleTime } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-fromEvent(document, 'mousemove');
+// fromEvent(document, 'mousemove')
+// .pipe(
+//   throttleTime(1000),
+//   map((ev: MouseEvent)=> ev.clientX+' '+ev.clientY)
+// )
+// .subscribe(console.log)
